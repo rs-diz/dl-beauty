@@ -144,8 +144,10 @@ a{color:inherit;text-decoration:none}
 /* пространство */
 .space{padding-block:clamp(60px,8vw,110px) clamp(40px,6vw,80px)}
 .space .sec-title{margin-bottom:clamp(20px,2.6vw,34px)}
-.space-grid{display:grid;grid-template-columns:minmax(0,1fr) 29%;gap:clamp(8px,.8vw,12px);margin-left:calc(var(--pad) * -1)}
-.space-main{aspect-ratio:1.2/1}
+.space-grid{display:grid;grid-template-columns:minmax(0,1fr) 29%;grid-template-rows:minmax(0,1fr);height:clamp(420px,54vw,780px);gap:clamp(8px,.8vw,12px);margin-left:calc(var(--pad) * -1)}
+.space-main{position:relative;height:100%}
+.space-main img{position:absolute;inset:0}
+.space-side{height:100%}
 .space-side{display:grid;grid-template-rows:repeat(3,minmax(0,1fr));gap:clamp(8px,.8vw,12px)}
 .space-side .ph{position:relative}
 .space-side .ph img{position:absolute;inset:0}
@@ -210,7 +212,9 @@ footer{margin-top:clamp(50px,6vw,80px);border-top:1px solid var(--ink);padding-b
   .price-cols{grid-template-columns:1fr}
   .why{grid-template-columns:1fr}
   .why-title{justify-content:flex-start;text-align:left}
-  .space-grid{grid-template-columns:1fr;margin-inline:calc(var(--pad) * -1)}
+  .space-grid{grid-template-columns:1fr;grid-template-rows:auto;height:auto;margin-inline:calc(var(--pad) * -1)}
+  .space-main{height:auto;aspect-ratio:1.2/1}
+  .space-side{height:auto}
   .space-side{grid-template-rows:none;grid-template-columns:repeat(3,1fr)}
   .space-side .ph{aspect-ratio:1/1}
   .ct-head{grid-template-columns:1fr}
